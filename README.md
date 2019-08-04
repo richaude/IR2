@@ -18,7 +18,7 @@ Each speech has one entry in our `protokolle3.json` file. The file is structured
 
 The json file is assembled with the function `mkJson2()` in `crawl.py`. The function `documents()` prepares the file to be indexed into elasticsearch. After executing this function, you need to go to kibana in your web browser (with elasticsearch running). Go to: `Connect to your Elasticsearch index`, then type in "new\_index" in the search bar. The "new\_index" should be recommended. Click on it and follow the subsequent steps until you see all the fields with their assigned value types. To actually perform search requests on it, go to the dev tools console and write a query like:
 ~~~~
-GET /new\_index/\_doc/_search
+GET /new_index/_doc/_search
 {
   "query": {
     "match_phrase": {
