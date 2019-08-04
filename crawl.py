@@ -3,8 +3,10 @@ from bs4 import BeautifulSoup
 import requests, json, os
 # vorher Bibliothek installieren: pip install elasticsearch
 from elasticsearch import Elasticsearch
-				
-def findeAfD3(url, rede_id, myDict):
+from elasticsearch.helpers import bulk
+
+			
+def findeAfD4(url, dictionaryList):
 	source = urlopen(url)
 	bs = BeautifulSoup(source, "xml")
 	for k in bs.findAll("kommentar"):
@@ -18,8 +20,6 @@ def findeAfD3(url, rede_id, myDict):
 	for rede in bs.findAll("rede"):
 		redeMeta = rede.find("p", {"klasse": "redner"})
 		partei = redeMeta.find("fraktion")
-		#if partei == None:
-		#	print("NEIN")
 		if partei != None and partei.text == "AfD":
 			for p in rede.findAll("fraktion"):
 				p.decompose()
@@ -32,32 +32,35 @@ def findeAfD3(url, rede_id, myDict):
 			sitzungsnummer = alleMetas.get("sitzung-nr")
 			datum = alleMetas.get("sitzung-datum")
 			eintragung = {"name":name, "datum":datum, "sitzungsnummer":sitzungsnummer, "rede":rede.text.strip()}
-			myDict[rede_id] = eintragung
-			rede_id += 1
-	return rede_id
-			
-
-def mkJson():
-	myDict = {}
-	rede_id = 1
-	for s in alleSitzungen():
-		rede_id = findeAfD3(s, rede_id, myDict)
-	#for k, v in myDict.items():
-		#print(k, v)
-	with open('protokolle.json', 'w', encoding='utf-8') as json_file:
-		json.dump(myDict, json_file, ensure_ascii=False)
-	print(str(rede_id))
+			dictionaryList.append(eintragung)
 	
-def verbinde(filename):
-	#http://carrefax.com/new-blog/2018/3/12/load-json-files-into-elasticsearch
-	#elasticsearch und kibana müssen bereits laufen
-	#noch ist unklar, wo ich dann den Index finde
-	res = requests.get('http://localhost:9200')
-	print (res.content)
-	es = Elasticsearch([{'host': 'localhost', 'port': '9200'}])
-	f = open(filename)
-	docket_content = f.read()
-	es.index(index='myindex', ignore=400, doc_type='docket', body=json.loads(docket_content))
+def mkJson2():
+	dictionaryList = []
+	for s in alleSitzungen():
+		findeAfD4(s, dictionaryList)
+	text = ""
+	print(str(len(dictionaryList)))
+	with open('protokolle3.json', 'w', encoding='utf-8') as json_file:
+		text += "{\n\"statements\":"
+		text += json.dumps(dictionaryList, ensure_ascii=False)
+		text+= "\n}"
+		json_file.write(text)
+		json_file.flush
+		json_file.close
+	
+	
+def documents():
+    with open('protokolle3.json', 'r') as file_handle:
+        parsed_json = json.loads(file_handle.read())
+        for document in parsed_json["statements"]:
+            yield {
+                "_index": "new_index",
+                "name":document["name"],
+                "datum":document["datum"],
+                "sitzungsnummer":document["sitzungsnummer"],
+                "rede":document["rede"],
+                "_type": "_doc",
+            }            
 				
 def alleSitzungen():
 	return ["https://www.bundestag.de/resource/blob/543388/e95b7194470ed3c4e8bca546dd0da950/19001-data.xml"
@@ -172,5 +175,6 @@ def alleSitzungen():
 			]
 
 	
-mkJson()
-#verbinde("protokolle.json")
+mkJson2()
+es = Elasticsearch()
+bulk(es, documents())
