@@ -175,6 +175,6 @@ def alleSitzungen():
 			]
 
 	
-mkJson2()
+#mkJson2()
 es = Elasticsearch()
 bulk(es, documents())
