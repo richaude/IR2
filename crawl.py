@@ -6,7 +6,7 @@ from elasticsearch import Elasticsearch
 from elasticsearch.helpers import bulk
 
 			
-def findeAfD4(url, dictionaryList):
+def findeAfD4(url, dictionaryList, rede_id):
 	source = urlopen(url)
 	bs = BeautifulSoup(source, "xml")
 	for k in bs.findAll("kommentar"):
@@ -31,30 +31,35 @@ def findeAfD4(url, dictionaryList):
 			alleMetas = bs.find("dbtplenarprotokoll")
 			sitzungsnummer = alleMetas.get("sitzung-nr")
 			datum = alleMetas.get("sitzung-datum")
-			eintragung = {"name":name, "datum":datum, "sitzungsnummer":sitzungsnummer, "rede":rede.text.strip()}
+			eintragung = {"dokument_id": rede_id, "name":name, "datum":datum, "sitzungsnummer":sitzungsnummer, "rede":rede.text.strip()}
 			dictionaryList.append(eintragung)
+			rede_id += 1
+	return rede_id
 	
-def mkJson2():
+	
+def mkJson3():
 	dictionaryList = []
+	rede_id = 1
 	for s in alleSitzungen():
-		findeAfD4(s, dictionaryList)
+		rede_id = findeAfD4(s, dictionaryList, rede_id)
 	text = ""
 	print(str(len(dictionaryList)))
-	with open('protokolle3.json', 'w', encoding='utf-8') as json_file:
+	with open('protokolle4.json', 'w', encoding='utf-8') as json_file:
 		text += "{\n\"statements\":"
 		text += json.dumps(dictionaryList, ensure_ascii=False)
 		text+= "\n}"
 		json_file.write(text)
 		json_file.flush
 		json_file.close
-	
-	
+	print(str(rede_id))
+			
 def documents():
-    with open('protokolle3.json', 'r') as file_handle:
+    with open('protokolle4.json', 'r') as file_handle:
         parsed_json = json.loads(file_handle.read())
         for document in parsed_json["statements"]:
             yield {
-                "_index": "new_index",
+                "_index": "new_index2",
+                "rede_id":document["dokument_id"],
                 "name":document["name"],
                 "datum":document["datum"],
                 "sitzungsnummer":document["sitzungsnummer"],
@@ -175,6 +180,6 @@ def alleSitzungen():
 			]
 
 	
-#mkJson2()
+#mkJson3()
 es = Elasticsearch()
 bulk(es, documents())
