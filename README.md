@@ -2,11 +2,12 @@
 ## Second attempt to develop a fully functioning search engine
 ### Data
 Our data consists of scraped protocols of 109 sessions of the German Bundestag, beginning with session 1 on 24th of October 2017 and ending with session 109 on 24th of July, 2019. For each session, only speeches of members of the AfD are stored, together with interposed questions of other Bundestag members and comments of the Bundestags(vize)präsident.
-Each speech has one entry in our `protokolle3.json` file. The file is structured like this:
+Each speech has one entry in our json file. The file is structured like this:
 ~~~~
 {
 	"statements":
-		{"name":"Max Mustermann",
+		{"dokument_id":"1 to 1459",
+		 "name":"Max Mustermann",
 		 "datum":"dd.mm.yyyy",
                  "sitzungsnummer":"1 to 109",
 		 "rede":"full text speech",
@@ -16,7 +17,7 @@ Each speech has one entry in our `protokolle3.json` file. The file is structured
 }
 ~~~~
 
-The json file is assembled with the function `mkJson2()` in `crawl.py`. But since the assembled file is already in this repository, I commented that out.
+The json file is assembled with the function `mkJson3()` in `crawl.py`. But since the assembled file is already in this repository, I commented that out.
 
 
 ### Indexing
