@@ -55,12 +55,12 @@ def mkJson3(filename):
 		json_file.close
 	print(str(rede_id))
 			
-def documents(filename):
+def documents(filename, indexname):
     with open(filename, 'r') as file_handle:
         parsed_json = json.loads(file_handle.read())
         for document in parsed_json["statements"]:
             yield {
-                "_index": "new_index3",
+                "_index": indexname,
                 "rede_id":document["dokument_id"],
                 "name":document["name"],
                 "datum":document["datum"],
@@ -184,4 +184,4 @@ def alleSitzungen():
 	
 #mkJson3("protokolle5.json")
 es = Elasticsearch()
-bulk(es, documents("protokolle5.json"))
+bulk(es, documents("protokolle5.json", "new_index3"))
