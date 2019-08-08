@@ -23,7 +23,7 @@ The json file is assembled with the function `mkJson3()` in `crawl.py`. But sinc
 ### Indexing
 The function `documents()` prepares the file to be indexed into elasticsearch. After executing this function, you need to go to kibana in your web browser (with elasticsearch running). Go to: `Connect to your Elasticsearch index`, then type in "new\_index2" in the search bar. The "new\_index" should be recommended. Click on it and follow the subsequent steps until you see all the fields with their assigned value types. To actually perform search requests on it, go to the dev tools console and write a query like:
 ~~~~
-GET /new_index2/_doc/_search
+GET /new_index3/_doc/_search
 {
   "query": {
     "match_phrase": {
