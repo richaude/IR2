@@ -25,26 +25,28 @@ def findeAfD4(url, dictionaryList, rede_id):
 				p.decompose()
 			#print(rede.text)
 			nameUsw = rede.find("p")
-			name = nameUsw.text[:-7]
-			#datumUsw = bs.find("datum")
-			#datum = datum.get("date")
-			alleMetas = bs.find("dbtplenarprotokoll")
-			sitzungsnummer = alleMetas.get("sitzung-nr")
-			datum = alleMetas.get("sitzung-datum")
-			eintragung = {"dokument_id": rede_id, "name":name, "datum":datum, "sitzungsnummer":sitzungsnummer, "rede":rede.text.strip()}
-			dictionaryList.append(eintragung)
-			rede_id += 1
+			if nameUsw.text[-7:] == " (AfD):":
+				name = nameUsw.text[:-7]
+				#datumUsw = bs.find("datum")
+				#datum = datum.get("date")
+				alleMetas = bs.find("dbtplenarprotokoll")
+				sitzungsnummer = alleMetas.get("sitzung-nr")
+				datum = alleMetas.get("sitzung-datum")
+				eintragung = {"dokument_id": rede_id, "name":name, "datum":datum, "sitzungsnummer":sitzungsnummer, "rede":rede.text.strip()}
+				dictionaryList.append(eintragung)
+				rede_id += 1
+			else:
+				pass
 	return rede_id
 	
-	
-def mkJson3():
+def mkJson3(filename):
 	dictionaryList = []
 	rede_id = 1
 	for s in alleSitzungen():
 		rede_id = findeAfD4(s, dictionaryList, rede_id)
 	text = ""
 	print(str(len(dictionaryList)))
-	with open('protokolle4.json', 'w', encoding='utf-8') as json_file:
+	with open(filename, 'w', encoding='utf-8') as json_file:
 		text += "{\n\"statements\":"
 		text += json.dumps(dictionaryList, ensure_ascii=False)
 		text+= "\n}"
@@ -53,12 +55,12 @@ def mkJson3():
 		json_file.close
 	print(str(rede_id))
 			
-def documents():
-    with open('protokolle4.json', 'r') as file_handle:
+def documents(filename):
+    with open(filename, 'r') as file_handle:
         parsed_json = json.loads(file_handle.read())
         for document in parsed_json["statements"]:
             yield {
-                "_index": "new_index2",
+                "_index": "new_index3",
                 "rede_id":document["dokument_id"],
                 "name":document["name"],
                 "datum":document["datum"],
@@ -180,6 +182,6 @@ def alleSitzungen():
 			]
 
 	
-#mkJson3()
+#mkJson3("protokolle5.json")
 es = Elasticsearch()
-bulk(es, documents())
+bulk(es, documents("protokolle5.json"))
