@@ -1,0 +1,29 @@
+{
+	"id": "014", 
+	"title": "gender", 
+	"description": "How does the AfD see gender studies?", 
+	"narrative": "relevant documents must include mentions of the \"gender\" buzzword."
+	"relevances": [
+	{
+		"rede_id":102,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1139,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1093,
+		"isRelevant":1
+	},
+	{
+		"rede-id":635,
+		"isRelevant":1
+	},
+	{
+		"rede_id":577,
+		"isRelevant":1
+	}
+	
+	]}
+

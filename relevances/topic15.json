@@ -1,0 +1,28 @@
+{
+	"id": "015", 
+	"title": "Landwirtschaft", 
+	"description": "How does the AfD see farmers and agriculture", 
+	"narrative": "relevant documents must include issues adressing agriculture"
+	"relevances": [
+	{
+		"rede_id":327,
+		"isRelevant":1
+	},
+	{
+		"rede_id":122,
+		"isRelevant":1
+	},
+	{
+		"rede_id":780,
+		"isRelevant":1
+	},
+	{
+		"rede_id":63,
+		"isRelevant":1
+	},
+	{
+		"rede_id":233,
+		"isRelevant":1
+	}
+	]}
+

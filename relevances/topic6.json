@@ -1,0 +1,49 @@
+{
+	"id": "006", 
+	"title": "Sachsen", 
+	"description": "How does the AfD think about the federal state of Saxonia", 
+	"narrative": "Relevant documents must adress Sachsen in particular, it has to stand out in the speech, among the other states"
+	"relevances": [
+	{
+		"rede_id":544,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1371,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1232,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1094,
+		"isRelevant":1
+	},
+	{
+		"rede_id":245,
+		"isRelevant":0
+	},
+	{
+		"rede_id":469,
+		"isRelevant":1
+	},
+	{
+		"rede_id":625,
+		"isRelevant":1
+	},
+	{
+		"rede_id":546,
+		"isRelevant":0
+	},
+	{
+		"rede_id":1246,
+		"isRelevant":1
+	},
+	{
+		"rede_id":597,
+		"isRelevant":0
+	}
+	
+	]}
+

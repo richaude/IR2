@@ -1,0 +1,48 @@
+{
+	"id": "004", 
+	"title": "Merkel", 
+	"description": "How does the AfD anticipate Merkels style of governing", 
+	"narrative": "Relevant documents must adress Merkel or talk about aspects of her policies."
+	"relevances": [
+	{
+		"rede_id":550,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1066,
+		"isRelevant":0
+	},
+	{
+		"rede_id":211,
+		"isRelevant":1
+	},
+	{
+		"rede_id":448,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1080,
+		"isRelevant":1
+	},
+	{
+		"rede_id":438,
+		"isRelevant":1
+	},
+	{
+		"rede_id":912,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1370,
+		"isRelevant":1
+	},
+	{
+		"rede_id":990,
+		"isRelevant":1
+	},
+	{
+		"rede_id":45,
+		"isRelevant":1
+	}
+]}
+

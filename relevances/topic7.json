@@ -1,0 +1,50 @@
+{
+	"id": "007", 
+	"title": "Bildung", 
+	"description": "How important is education for the AfD", 
+	"narrative": "Relevant documents must include plans for public education or a description of current conditions"
+	"relevances": [
+	{
+		"rede_id":534,
+		"isRelevant":1
+	},
+	{
+		"rede_id":481,
+		"isRelevant":1
+	},
+	{
+		"rede_id":298,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1262,
+		"isRelevant":1
+	},
+	{ 
+		"rede_id":23,
+		"isRelevant":1
+	},
+	{
+		"rede_id":352,
+		"isRelevant":1
+	},
+	{
+		"rede_id":964,
+		"isRelevant":1
+	},
+	{
+		"rede_id":466,
+		"isRelevant":1
+	},
+	{
+		"rede_id":219,
+		"isRelevant":1
+	},
+	{
+		"rede_id":803,
+		"isRelevant":1
+	}
+		
+	]
+	}
+

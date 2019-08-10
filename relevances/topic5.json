@@ -1,0 +1,49 @@
+{
+	"id": "005", 
+	"title": "Arbeitslose", 
+	"description": "How does the AfD see the situation in the countries for people who have no jobs?", 
+	"narrative": "relevant documents must speak about people who have no jobs and plans to better conditions for them"
+	"relevances": [
+	{
+		"rede_id":462,
+		"isRelevant":1
+	},
+	{
+		"rede_id":597,
+		"isRelevant":0
+	},
+	{
+		"rede_id":1291,
+		"isRelevant":0
+	},
+	{
+		"rede_id":689,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1138,
+		"isRelevant":0
+	},
+	{
+		"rede_id":368,
+		"isRelevant":1
+	},
+	{
+		"rede_id":706,
+		"isRelevant":0
+	},
+	{
+		"rede_id":90,
+		"isRelevant":1
+	},
+	{
+		"rede_id":340,
+		"isRelevant":0
+	},
+	{
+		"rede_id":527,
+		"isRelevant"0
+	}
+	
+	]}
+
