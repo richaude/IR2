@@ -34,6 +34,13 @@ GET /new_index3/_doc/_search
 ~~~~
 
 ### Evaluation
+
+#### first evaluation
+The first evaluation of the project was done on August 11, using a total amount of 50 topics and manually judging top 5 results for each query (the title of the topic).
+Topics and assigned judgements can be found in the `topics` respectively `relevances` folder.
+Mean average precision after the first evaluation is at 0.24927536231884054.
+
+#### this section is outdated, we decided to abandon Quepid
 As a useful tool for evaluating our search project, we used [Quepid](https://quepid.com/ "Quepid").
 In order to get Quepid connecting to our Elasticsearch project, the `elasticsearch.yml` config file needs to be configurated. This file should be in the `config` folder. This folder is in the same directory as the `bin` folder is.
 Leave all the commented stuff in `elasticsearch.yml` as it is and add to the end this uncommented stuff:

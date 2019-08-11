@@ -1,0 +1,29 @@
+{
+	"id": "034", 
+	"title": "DDR", 
+	"description": "How and when does the AfD talk about the German Democratic Republic", 
+	"narrative": "relevant documents mention the GDR in particular",
+	"relevances": [
+	{
+		"rede_id":1268,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1428,
+		"isRelevant":1
+	},
+	{
+		"rede_id":313,
+		"isRelevant":1
+	},
+	{
+		"rede_id":729,
+		"isRelevant":1
+	},
+	{
+		"rede_id":593,
+		"isRelevant":1
+	}
+	]
+	}
+

@@ -1,0 +1,29 @@
+{
+	"id": "042", 
+	"title": "Nazis", 
+	"description": "Does the AfD talk about Nazis", 
+	"narrative": "relevant documents mention this term, which is rather colloquial for parliaments speech",
+	"relevances": [
+	{
+		"rede_id":951,
+		"isRelevant":1
+	},
+	{
+		"rede_id":593,
+		"isRelevant":1
+	},
+	{
+		"rede_id":576,
+		"isRelevant":1
+	},
+	{
+		"rede_id":551,
+		"isRelevant":1
+	},
+	{
+		"rede_id":313,
+		"isRelevant":1
+	}
+	]
+	}
+

@@ -2,7 +2,7 @@
 	"id": "012", 
 	"title": "Bundeswehr", 
 	"description": "How does the AfD see the current Bundeswehr", 
-	"narrative": "relevant documents include plans for the Bundeswehr or a description of the current conditions"
+	"narrative": "relevant documents include plans for the Bundeswehr or a description of the current conditions",
 	"relevances": [
 	{
 		"rede_id":1351,

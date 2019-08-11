@@ -1,0 +1,426 @@
+precisions fuer alle topics:
+opic 1, precision@2: 1.0
+
+Topic 1, precision@3: 1.0
+
+Topic 1, precision@4: 1.0
+
+Topic 1, precision@5: 1.0
+
+average precision topic 1: 0.2
+
+average precision topic 2: 1.0
+
+Topic 2, precision@1: 1.0
+
+Topic 4, precision@1: 1.0
+
+Topic 4, precision@3: 0.6666666666666666
+
+Topic 4, precision@4: 0.75
+
+average precision topic 3: 1.0
+
+Topic 4, precision@5: 0.8
+
+Topic 5, precision@1: 1.0
+
+average precision topic 4: 0.2
+
+Topic 5, precision@4: 0.5
+
+Topic 6, precision@1: 1.0
+
+Topic 6, precision@2: 1.0
+
+Topic 6, precision@3: 1.0
+
+average precision topic 5: 0.0
+
+Topic 6, precision@4: 1.0
+
+Topic 7, precision@1: 1.0
+
+Topic 7, precision@2: 1.0
+
+Topic 7, precision@3: 1.0
+
+Topic 7, precision@4: 1.0
+
+average precision topic 6: 0.0
+
+Topic 7, precision@5: 1.0
+
+Topic 8, precision@1: 1.0
+
+Topic 8, precision@2: 1.0
+
+Topic 8, precision@3: 1.0
+
+Topic 8, precision@4: 1.0
+
+average precision topic 7: 0.2
+
+Topic 8, precision@5: 1.0
+
+average precision topic 8: 0.2
+
+Topic 9, precision@1: 1.0
+
+Topic 10, precision@1: 1.0
+
+Topic 10, precision@2: 1.0
+
+average precision topic 9: 1.0
+
+Topic 10, precision@5: 0.6
+
+average precision topic 10: 0.19999999999999998
+
+Topic 11, precision@1: 1.0
+
+Topic 12, precision@1: 1.0
+
+Topic 12, precision@2: 1.0
+
+Topic 12, precision@3: 1.0
+
+Topic 12, precision@4: 1.0
+
+average precision topic 11: 0.0
+
+average precision topic 12: 0.2
+
+Topic 12, precision@5: 1.0
+
+Topic 14, precision@1: 1.0
+
+Topic 14, precision@2: 1.0
+
+Topic 14, precision@3: 1.0
+
+Topic 14, precision@4: 1.0
+
+average precision topic 13: 0.2
+
+Topic 14, precision@5: 1.0
+
+Topic 15, precision@1: 1.0
+
+Topic 15, precision@2: 1.0
+
+Topic 15, precision@3: 1.0
+
+Topic 15, precision@4: 1.0
+
+average precision topic 14: 0.2
+
+Topic 15, precision@5: 1.0
+
+Topic 16, precision@1: 1.0
+
+Topic 16, precision@2: 1.0
+
+average precision topic 15: 0.2
+
+Topic 16, precision@5: 0.6
+
+Topic 17, precision@1: 1.0
+
+Topic 17, precision@2: 1.0
+
+average precision topic 16: 0.19999999999999998
+
+Topic 17, precision@3: 1.0
+
+Topic 18, precision@2: 0.5
+
+Topic 18, precision@3: 0.6666666666666666
+
+Topic 18, precision@4: 0.75
+
+average precision topic 17: 0.3333333333333333
+
+Topic 18, precision@5: 0.8
+
+Topic 19, precision@2: 0.5
+
+Topic 19, precision@4: 0.5
+
+average precision topic 18: 0.2
+
+Topic 19, precision@5: 0.6
+
+Topic 20, precision@1: 1.0
+
+average precision topic 19: 0.19999999999999998
+
+Topic 20, precision@2: 1.0
+
+Topic 21, precision@1: 1.0
+
+Topic 21, precision@2: 1.0
+
+Topic 21, precision@3: 1.0
+
+average precision topic 20: 0.0
+
+Topic 21, precision@4: 1.0
+
+Topic 22, precision@1: 1.0
+
+Topic 22, precision@2: 1.0
+
+Topic 22, precision@3: 1.0
+
+average precision topic 21: 0.0
+
+Topic 22, precision@5: 0.8
+
+Topic 23, precision@1: 1.0
+
+Topic 23, precision@2: 1.0
+
+Topic 23, precision@3: 1.0
+
+average precision topic 22: 0.2
+
+Topic 23, precision@5: 0.8
+
+Topic 24, precision@1: 1.0
+
+Topic 24, precision@3: 0.6666666666666666
+
+average precision topic 23: 0.2
+
+Topic 24, precision@5: 0.6
+
+Topic 25, precision@1: 1.0
+
+Topic 25, precision@2: 1.0
+
+Topic 25, precision@3: 1.0
+
+average precision topic 24: 0.19999999999999998
+
+Topic 25, precision@4: 1.0
+
+Topic 26, precision@1: 1.0
+
+Topic 26, precision@2: 1.0
+
+Topic 26, precision@3: 1.0
+
+Topic 26, precision@4: 1.0
+
+average precision topic 25: 0.0
+
+Topic 26, precision@5: 1.0
+
+Topic 27, precision@1: 1.0
+
+average precision topic 26: 0.2
+
+Topic 27, precision@5: 0.4
+
+Topic 28, precision@1: 1.0
+
+Topic 28, precision@2: 1.0
+
+average precision topic 27: 0.2
+
+average precision topic 28: 0.0
+
+Topic 28, precision@3: 1.0
+
+Topic 30, precision@1: 1.0
+
+Topic 30, precision@2: 1.0
+
+Topic 30, precision@3: 1.0
+
+Topic 30, precision@4: 1.0
+
+average precision topic 29: 0.0
+
+Topic 30, precision@5: 1.0
+
+Topic 31, precision@2: 0.5
+
+Topic 31, precision@3: 0.6666666666666666
+
+Topic 31, precision@4: 0.75
+
+average precision topic 30: 0.2
+
+Topic 31, precision@5: 0.8
+
+Topic 32, precision@2: 0.5
+
+Topic 32, precision@3: 0.6666666666666666
+
+average precision topic 31: 0.2
+
+Topic 32, precision@4: 0.75
+
+Topic 33, precision@2: 0.5
+
+Topic 33, precision@3: 0.6666666666666666
+
+Topic 33, precision@4: 0.75
+
+average precision topic 32: 0.0
+
+Topic 33, precision@5: 0.8
+
+Topic 34, precision@1: 1.0
+
+Topic 34, precision@2: 1.0
+
+Topic 34, precision@3: 1.0
+
+Topic 34, precision@4: 1.0
+
+average precision topic 33: 0.2
+
+Topic 34, precision@5: 1.0
+
+Topic 35, precision@1: 1.0
+
+Topic 35, precision@2: 1.0
+
+average precision topic 34: 0.2
+
+Topic 35, precision@3: 1.0
+
+average precision topic 35: 0.0
+
+Topic 36, precision@1: 1.0
+
+average precision topic 36: 1.0
+
+Topic 37, precision@3: 0.3333333333333333
+
+Topic 38, precision@1: 1.0
+
+Topic 38, precision@2: 1.0
+
+Topic 38, precision@3: 1.0
+
+Topic 38, precision@4: 1.0
+
+average precision topic 37: 0.0
+
+Topic 38, precision@5: 1.0
+
+Topic 39, precision@1: 1.0
+
+Topic 39, precision@2: 1.0
+
+average precision topic 38: 0.2
+
+Topic 39, precision@4: 0.75
+
+average precision topic 39: 0.0
+
+Topic 40, precision@1: 1.0
+
+Topic 41, precision@1: 1.0
+
+Topic 41, precision@2: 1.0
+
+Topic 41, precision@3: 1.0
+
+Topic 41, precision@4: 1.0
+
+average precision topic 40: 1.0
+
+Topic 41, precision@5: 1.0
+
+Topic 42, precision@1: 1.0
+
+Topic 42, precision@2: 1.0
+
+Topic 42, precision@3: 1.0
+
+Topic 42, precision@4: 1.0
+
+average precision topic 41: 0.2
+
+Topic 42, precision@5: 1.0
+
+Topic 43, precision@1: 1.0
+
+Topic 43, precision@2: 1.0
+
+Topic 43, precision@3: 1.0
+
+Topic 43, precision@4: 1.0
+
+average precision topic 42: 0.2
+
+average precision topic 43: 0.2
+
+Topic 43, precision@5: 1.0
+
+Topic 45, precision@1: 1.0
+
+Topic 45, precision@2: 1.0
+
+Topic 45, precision@3: 1.0
+
+Topic 45, precision@4: 1.0
+
+average precision topic 44: 0.2
+
+Topic 45, precision@5: 1.0
+
+Topic 46, precision@1: 1.0
+
+Topic 46, precision@2: 1.0
+
+average precision topic 45: 0.2
+
+Topic 46, precision@3: 1.0
+
+Topic 47, precision@1: 1.0
+
+Topic 47, precision@2: 1.0
+
+Topic 47, precision@3: 1.0
+
+Topic 47, precision@4: 1.0
+
+average precision topic 46: 0.3333333333333333
+
+Topic 47, precision@5: 1.0
+
+Topic 48, precision@1: 1.0
+
+average precision topic 47: 0.2
+
+Topic 48, precision@3: 0.6666666666666666
+
+Topic 49, precision@1: 1.0
+
+Topic 49, precision@2: 1.0
+
+Topic 49, precision@3: 1.0
+
+Topic 49, precision@4: 1.0
+
+average precision topic 48: 0.0
+
+Topic 49, precision@5: 1.0
+
+Topic 50, precision@1: 1.0
+
+Topic 50, precision@2: 1.0
+
+average precision topic 49: 0.2
+
+Topic 50, precision@3: 1.0
+
+average precision topic 50: 0.0
+
+Mean Average Precision: 0.24927536231884054

@@ -1,0 +1,13 @@
+{
+	"id": "036", 
+	"title": "Bannon", 
+	"description": "Is US far right activist Steve Bannon mentioned in the Bundestag?", 
+	"narrative": "relevant documents mention Steve Bannon",
+	"relevances": [
+	{
+		"rede_id":761,
+		"isRelevant":1
+	}
+	]
+	}
+

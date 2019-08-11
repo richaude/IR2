@@ -1,0 +1,29 @@
+{
+	"id": "038", 
+	"title": "Krieg", 
+	"description": "How and with which kind of connotation is talked about war in an AfD speech", 
+	"narrative": "relevant documents include mentions of any war or conflict as main issue",
+	"relevances": [
+	{
+		"rede_id":1180,
+		"isRelevant":1
+	},
+	{
+		"rede_id":170,
+		"isRelevant":1
+	},
+	{
+		"rede_id":381,
+		"isRelevant":1
+	},
+	{
+		"rede_id":74,
+		"isRelevant":1
+	},
+	{
+		"rede_id":401,
+		"isRelevant":1
+	}
+	]
+	}
+

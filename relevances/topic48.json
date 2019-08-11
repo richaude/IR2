@@ -1,0 +1,29 @@
+{
+	"id": "048", 
+	"title": "Facebook", 
+	"description": "When does the AfD mention Facebook", 
+	"narrative": "relevant documents talk about all issues concerning Facebook",
+	"relevances": [
+	{
+		"rede_id":817,
+		"isRelevant":1
+	},
+	{
+		"rede_id":798,
+		"isRelevant":0
+	},
+	{
+		"rede_id":376,
+		"isRelevant":1
+	},
+	{
+		"rede_id":746,
+		"isRelevant":0
+	},
+	{
+		"rede_id":256,
+		"isRelevant":0
+	}
+	]
+	}
+

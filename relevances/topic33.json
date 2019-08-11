@@ -1,0 +1,29 @@
+{
+	"id": "033", 
+	"title": "Universitäten", 
+	"description": "what does the AfD say about universities", 
+	"narrative": "relevant documents include a description of problems or other issues, the AfD sees in universities in particular",
+	"relevances": [
+	{
+		"rede_id":1049,
+		"isRelevant":0
+	},
+	{
+		"rede_id":218,
+		"isRelevant":1
+	},
+	{
+		"rede_id":889,
+		"isRelevant":1
+	},
+	{
+		"rede_id":960,
+		"isRelevant":1
+	},
+	{
+		"rede_id":533,
+		"isRelevant":1
+	}
+	]
+	}
+

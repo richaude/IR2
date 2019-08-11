@@ -1,0 +1,28 @@
+{
+	"id": "032", 
+	"title": "Feminismus", 
+	"description": "How does the AfD see feminism?", 
+	"narrative": "relevant documents include feminism as a main topic, and a judgement made by the AfD, about it",
+	"relevances": [
+	{
+		"rede_id":1353,
+		"isRelevant":0
+	},
+	{
+		"rede_id":147,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1088,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1089,
+		"isRelevant":1
+	},
+	{
+		"rede_id":881,
+		"isRelevant":0
+	}
+	]}
+

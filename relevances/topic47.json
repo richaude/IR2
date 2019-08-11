@@ -1,0 +1,29 @@
+{
+	"id": "047", 
+	"title": "fridays for future", 
+	"description": "How does the AfD talk about the fridays for future movement", 
+	"narrative": "relevant documents mention the students' demonstration for climate protection",
+	"relevances": [
+	{
+		"rede_id":1099,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1067,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1360,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1098,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1244,
+		"isRelevant":1
+	}
+	]
+	}
+

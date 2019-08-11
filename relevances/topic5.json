@@ -2,7 +2,7 @@
 	"id": "005", 
 	"title": "Arbeitslose", 
 	"description": "How does the AfD see the situation in the countries for people who have no jobs?", 
-	"narrative": "relevant documents must speak about people who have no jobs and plans to better conditions for them"
+	"narrative": "relevant documents must speak about people who have no jobs and plans to better conditions for them",
 	"relevances": [
 	{
 		"rede_id":462,
@@ -42,7 +42,7 @@
 	},
 	{
 		"rede_id":527,
-		"isRelevant"0
+		"isRelevant":0
 	}
 	
 	]}

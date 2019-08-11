@@ -1,0 +1,29 @@
+{
+	"id": "020", 
+	"title": "Medien", 
+	"description": "What's the AfD's opinion on the media?", 
+	"narrative": "relevant documents mention the perception of all kinds of media by the AfD as the main topic",
+	"relevances": [
+	{
+		"rede_id":553,
+		"isRelevant":1
+	},
+	{
+		"rede_id":273,
+		"isRelevant":1
+	},
+	{
+		"rede_id":851,
+		"isRelevant":0
+	},
+	{
+		"rede_id":1216,
+		"isRelevant":0
+	},
+	{
+		"rede_id":1370,
+		"isRelevant":0
+	}
+	]
+	}
+

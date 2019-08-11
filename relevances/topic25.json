@@ -1,0 +1,29 @@
+{
+	"id": "025", 
+	"title": "USA", 
+	"description": "When are the United States of America mentioned by members of the AfD?", 
+	"narrative": "relevant documents include peculiar mentions of the USA",
+	"relevances": [
+	{
+		"rede_id":972,
+		"isRelevant":1
+	},
+	{
+		"rede_id":363,
+		"isRelevant":1
+	},
+	{
+		"rede_id":973,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1348,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1120,
+		"isRelevant":0
+	}
+	]
+	}
+

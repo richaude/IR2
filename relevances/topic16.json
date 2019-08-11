@@ -1,0 +1,30 @@
+{
+	"id": "016", 
+	"title": "Seehofer", 
+	"description": "What does the AfD think about politician Seehofer", 
+	"narrative": "relevant documents must mention or adress Seehofer in a peculiar fashion that makes his name stand out",
+	"relevances": [
+	{
+		"rede_id":1145,
+		"isRelevant":1
+	},
+	{
+		"rede_id":632,
+		"isRelevant":1
+	},
+	{
+		"rede_id":818,
+		"isRelevant":0
+	},
+	{
+		"rede_id":679,
+		"isRelevant":0
+	},
+	{
+		"rede_id":506,
+		"isRelevant":1
+	}
+	
+	]
+	}
+

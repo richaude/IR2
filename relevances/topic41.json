@@ -1,0 +1,29 @@
+{
+	"id": "041", 
+	"title": "die NATO", 
+	"description": "How is the NATO seen by the AfD", 
+	"narrative": "relevant documents talk about the NATO in a stand out fashion",
+	"relevances": [
+	{
+		"rede_id":27,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1117,
+		"isRelevant":1
+	},
+	{
+		"rede_id":162,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1344,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1151,
+		"isRelevant":1
+	}
+	]
+	}
+

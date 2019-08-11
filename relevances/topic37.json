@@ -1,0 +1,29 @@
+{
+	"id": "037", 
+	"title": "Osteuropa", 
+	"description": "Is eastern Europe mentioned during an AfD speech", 
+	"narrative": "relevant documents include mentions of eastern Europe in specific",
+	"relevances": [
+	{
+		"rede_id":105,
+		"isRelevant":0
+	},
+	{
+		"rede_id":885,
+		"isRelevant":0
+	},
+	{
+		"rede_id":811,
+		"isRelevant":1
+	},
+	{
+		"rede_id":951,
+		"isRelevant":0
+	},
+	{
+		"rede_id":700,
+		"isRelevant":0
+	}
+	]
+	}
+

@@ -1,0 +1,29 @@
+{
+	"id": "045", 
+	"title": "Klimawandel", 
+	"description": "Does the AfD ever adress climate change", 
+	"narrative": "relevant documents mention the issue of climate change in a stand out fashion",
+	"relevances": [
+	{
+		"rede_id":236,
+		"isRelevant":1
+	},
+	{
+		"rede_id":599,
+		"isRelevant":1
+	},
+	{
+		"rede_id":688,
+		"isRelevant":1
+	},
+	{
+		"rede_id":934,
+		"isRelevant":1
+	},
+	{
+		"rede_id":600,
+		"isRelevant":1
+	}
+	]
+	}
+

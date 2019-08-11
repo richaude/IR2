@@ -1,0 +1,29 @@
+{
+	"id": "026", 
+	"title": "Russland", 
+	"description": "Which speeches talk about Russia?", 
+	"narrative": "relevant documents talk in a stand out fashion about Russia and/or the Russian Federation",
+	"relevances": [
+	{
+		"rede_id":947,
+		"isRelevant":1
+	},
+	{
+		"rede_id":109,
+		"isRelevant":1
+	},
+	{
+		"rede_id":418,
+		"isRelevant":1
+	},
+	{
+		"rede_id":194,
+		"isRelevant":1
+	},
+	{
+		"rede_id":192,
+		"isRelevant":1
+	}
+	]
+	}
+

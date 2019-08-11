@@ -1,0 +1,30 @@
+{
+	"id": "019", 
+	"title": "kriminell", 
+	"description": "In which context does this word occur in an AfD Speech?", 
+	"narrative": "relevant documents contain this word or a semantically similar in repeated phrasing and context",
+	"relevances": [
+	{
+		"rede_id":114,
+		"isRelevant":0
+	},
+	{
+		"rede_id":601,
+		"isRelevant":1
+	},
+	{
+		"rede_id":72,
+		"isRelevant":0
+	},
+	{
+		"rede_id":600,
+		"isRelevant":1
+	},
+	{
+		"rede_id":186,
+		"isRelevant":1
+	}
+	]
+	
+	}
+

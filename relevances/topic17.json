@@ -1,0 +1,22 @@
+{
+	"id": "017", 
+	"title": "Seenotrettung", 
+	"description": "How does the AfD see the issue of saving people in the oceans and how do they judge people who actively volunteer to save drowning people", 
+	"narrative": "relevant documents must mention sea rescue as main topic of speech",
+	"relevances": [
+	{
+		"rede_id":454,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1117,
+		"isRelevant":1
+	},
+	{
+		"rede_id":455,
+		"isRelevant":1
+	}
+	
+	]
+	}
+
