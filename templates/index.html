@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset = "UTF-8">
+	<title>AfD statement search</title>
+	<style>
+		pre {
+            overflow-x: auto;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+         }
+	</style>
+</head>
+<body>
+<form action="/" method="get" autocomplete="off">
+		<label for="q"> hier eingeben: </label><input type="text" name="q" id="q" value="{{q}}">
+		<input type="submit" value="suchen">
+	<!--{{response}}-->
+<ol>
+	{%for resp in response.hits.hits %}
+	<!--<li><a href="{{resp._source.datum}}"> {{resp._source.name}}</a></li>    macht einen Link, die Url ist dann das Datum, der Name ist blau zum Anklicken-->
+	<details>
+			<summary>{{resp._source.name}}, {{resp._source.datum}}</summary><br><pre>{{resp._source.rede}}</pre><br><br>
+	</details>
+	{% endfor %}
+</ol>
+</form>
+</body>
+</html>

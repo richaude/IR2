@@ -33,6 +33,10 @@ GET /new_index3/_doc/_search
 }
 ~~~~
 
+### GUI
+
+The GUI for our project is handled by the flask python library, so be sure to install flask, for example with `pip install Flask`. You will also need to do `pip install Elasticsearch` if you haven't already. Now, while Elasticsearch is running, execute `app.py`. Then, open `http://127.0.0.1:8000/` in your browser. You can now enter your search terms!
+
 ### Evaluation
 
 #### first evaluation
