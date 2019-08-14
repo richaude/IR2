@@ -8,7 +8,7 @@ es = Elasticsearch()
 def index():
 	q = request.args.get("q")
 	if q is not None:
-		resp = es.search(index="new_index3",body={"query": {"match_phrase": {"rede": q}}}, size=5)
+		resp = es.search(index="new_index",body={"query": {"match_phrase": {"rede": q}}}, size=5)
 		return render_template("index.html", q=q, response=resp)
 	return render_template("index.html", response=es.search(size=0))
 

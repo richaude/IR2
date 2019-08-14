@@ -28,25 +28,43 @@
 			position: relative;
 			word-wrap: break-word;*/
 		 }
+		 span {
+			 font-family: Arial, Helvetica, sans-serif;
+			 font-weight: bold;
+			 color: blue;
+			 padding-left: 30px;
+		 }
+		details summary::-webkit-details-marker {
+			display:none;
+		}
 		label {
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: 16px;
+			padding-left: 40px;
 		}
-		details summary::-webkit-details-marker {
-			display:none;
+		input {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 24px;
 		}
 	</style>
 </head>
 <body>
 	<h1>Suche für AfD Äußerungen im Bundestag, 19. Legislaturperiode.</h1>
+		
 <form action="/" method="get" autocomplete="off">
-		<label for="q"> hier eingeben: </label><input type="text" name="q" id="q" value="{{q}}">
+		<label for="q"> Suchbegriff hier eingeben: </label><input type="text" name="q" id="q" value="{{q}}">
 		<input type="submit" value="suchen">
 	<!--{{response}}-->
 <ol>
 	{%for resp in response.hits.hits %}
-	<!--<li><a href="{{resp._source.datum}}"> {{resp._source.name}}</a></li>    macht einen Link, die Url ist dann das Datum, der Name ist blau zum Anklicken-->
-		<p class="a">{{resp._source.name}}, {{resp._source.datum}}</p><pre><p class="b">{{resp._source.rede}}</p></pre><br><br>
+		<p class="a">{{resp._source.name}}, {{resp._source.datum}}</p>
+		<details>
+			<summary>
+				<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>
+			</summary>
+				<pre><p class="b">{{resp._source.otherParagraphs}}</p></pre>
+	</details>
+	<br><br>
 	{% endfor %}
 </ol>
 </form>
