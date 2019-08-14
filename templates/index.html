@@ -12,9 +12,33 @@
             white-space: -o-pre-wrap;
             word-wrap: break-word;
          }
+        p.a {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+			color: blue;
+		}
+        p.b {
+			font-family: Arial, Helvetica, sans-serif;
+			padding-right: 30px;
+			/*color: grey; 
+			overflow: hidden; 
+			height: 64px;
+			line-height: 16px; 
+			position: relative;
+			word-wrap: break-word;*/
+		 }
+		label {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+		}
+		details summary::-webkit-details-marker {
+			display:none;
+		}
 	</style>
 </head>
 <body>
+	<h1>Suche für AfD Äußerungen im Bundestag, 19. Legislaturperiode.</h1>
 <form action="/" method="get" autocomplete="off">
 		<label for="q"> hier eingeben: </label><input type="text" name="q" id="q" value="{{q}}">
 		<input type="submit" value="suchen">
@@ -22,9 +46,7 @@
 <ol>
 	{%for resp in response.hits.hits %}
 	<!--<li><a href="{{resp._source.datum}}"> {{resp._source.name}}</a></li>    macht einen Link, die Url ist dann das Datum, der Name ist blau zum Anklicken-->
-	<details>
-			<summary>{{resp._source.name}}, {{resp._source.datum}}</summary><br><pre>{{resp._source.rede}}</pre><br><br>
-	</details>
+		<p class="a">{{resp._source.name}}, {{resp._source.datum}}</p><pre><p class="b">{{resp._source.rede}}</p></pre><br><br>
 	{% endfor %}
 </ol>
 </form>
