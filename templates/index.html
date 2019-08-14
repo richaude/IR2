@@ -63,6 +63,13 @@
 				<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>
 			</summary>
 				<pre><p class="b">{{resp._source.otherParagraphs}}</p></pre>
+				{% if resp._source.sitzungsnummer|length > 2 %}
+					<a href="http://dip21.bundestag.de/dip21/btp/19/19{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
+				{% elif resp._source.sitzungsnummer|length == 2 %}
+					<a href="http://dip21.bundestag.de/dip21/btp/19/190{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
+				{% else %}
+					<a href="http://dip21.bundestag.de/dip21/btp/19/1900{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
+				{% endif %}
 	</details>
 	<br><br>
 	{% endfor %}

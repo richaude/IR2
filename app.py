@@ -15,3 +15,5 @@ def index():
 
 if __name__ == "__main__":
 	app.run(debug=True,port=8000)
+
+# jinja ist zum Einbinden von Python in Html, django ist für das Management von Projekten
