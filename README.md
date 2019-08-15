@@ -42,7 +42,15 @@ The GUI for our project is handled by the flask python library, so be sure to in
 #### first evaluation
 The first evaluation of the project was done on August 11, using a total amount of 50 topics and manually judging top 5 results for each query (the title of the topic).
 Topics and assigned judgements can be found in the `topics` respectively `relevances` folder.
-Mean average precision after the first evaluation is at 0.24927536231884054.
+Mean average precision after the first evaluation is at 0.9773640661938535.
+
+### Optimization
+
+#### Log:
+new_index2: text wird so gelassen, Stand der ersten Evaluation
+new_index4: Bindestriche werden gelöscht (klappt gut bei "linksgrün", klappt nicht bei G20)
+bei new_index4: multi match query für ersten Abschnitt^3, dann alle anderen Absätze, und vollständige Rede^2.
+
 
 #### this section is outdated, we decided to abandon Quepid
 As a useful tool for evaluating our search project, we used [Quepid](https://quepid.com/ "Quepid").

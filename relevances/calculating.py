@@ -14,8 +14,8 @@ def precisionEach():
 			parsed_json = json.loads(file_handle.read())
 			relevant = 0
 			k = 1
+			averagePrecisionAll = 0
 			for retrieved in parsed_json["relevances"]:
-				averagePrecisionAll = 0
 				if retrieved["isRelevant"] == 1:
 					relevant += 1
 					precisionK = relevant/k

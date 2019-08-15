@@ -46,10 +46,13 @@
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: 24px;
 		}
+		a {
+			font-family: Arial, Helvetica, sans-serif;
+		}
 	</style>
 </head>
 <body>
-	<h1>Suche für AfD Äußerungen im Bundestag, 19. Legislaturperiode.</h1>
+	<h1>Suche für AfD Äußerungen im Bundestag, alle 109 Sitzungen der 19. Legislaturperiode.</h1>
 		
 <form action="/" method="get" autocomplete="off">
 		<label for="q"> Suchbegriff hier eingeben: </label><input type="text" name="q" id="q" value="{{q}}">
@@ -57,7 +60,7 @@
 	<!--{{response}}-->
 <ol>
 	{%for resp in response.hits.hits %}
-		<p class="a">{{resp._source.name}}, {{resp._source.datum}}</p>
+		<p class="a">{{resp._source.name}}, {{resp._source.datum}}, rede_id: {{resp._source.rede_id}}</p>
 		<details>
 			<summary>
 				<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>

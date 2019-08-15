@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from elasticsearch import Elasticsearch
+import re
 
 app = Flask(__name__)
 es = Elasticsearch()
@@ -8,7 +9,8 @@ es = Elasticsearch()
 def index():
 	q = request.args.get("q")
 	if q is not None:
-		resp = es.search(index="new_index",body={"query": {"match_phrase": {"rede": q}}}, size=5)
+		#resp = es.search(index="new_index2",body={"query": {"match_phrase": {"rede": q}}}, size=5)
+		resp = es.search(index="new_index4",body={"query": {"multi_match": {"query": q, "fields" : [ "paragraph1^3", "otherParagraphs", "rede^2", "name^5" ]}}}, size=5)
 		return render_template("index.html", q=q, response=resp)
 	return render_template("index.html", response=es.search(size=0))
 

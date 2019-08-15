@@ -1,7 +1,27 @@
 {
 	"id": "003", 
-	"title": "G20", 
-	"description": "How are all international events like G20 judged by the AfD?", 
-	"narrative": "Relevant documents must include mentions of international meetings, especially the G20.",
+	"title": "G 20", 
+	"description": "How are all international events like G 20 judged by the AfD?", 
+	"narrative": "Relevant documents must include mentions of international meetings, especially the G 20.",
 	"relevances" : [
+	{
+		"rede_id":449,
+		"isRelevant":1
+	},
+	{
+		"rede_id":796,
+		"isRelevant":1
+	},
+	{
+		"rede_id":608,
+		"isRelevant":1
+	},
+	{
+		"rede_id":231,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1172,
+		"isRelevant":0
+	}
 	]}
