@@ -18,6 +18,21 @@
 			font-weight: bold;
 			color: blue;
 		}
+		p.c {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+			/*color: red;*/
+			font-size: 16px;
+			padding-left: 40px;
+		}
+		p.d {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+			/*color: red;*/
+			font-size: 16px;
+		}
         p.b {
 			font-family: Arial, Helvetica, sans-serif;
 			padding-right: 30px;
@@ -49,34 +64,59 @@
 		a {
 			font-family: Arial, Helvetica, sans-serif;
 		}
+		em {
+			font-family: Arial, Helvetica, sans-serif;
+		}
 	</style>
 </head>
 <body>
-	<h1>Suche für AfD Äußerungen im Bundestag, alle 109 Sitzungen der 19. Legislaturperiode.</h1>
+	<h1>Suche für AfD Äußerungen im Bundestag, die ersten 109 Sitzungen der 19. Legislaturperiode.</h1>
 		
 <form action="/" method="get" autocomplete="off">
 		<label for="q"> Suchbegriff hier eingeben: </label><input type="text" name="q" id="q" value="{{q}}">
 		<input type="submit" value="suchen">
 	<!--{{response}}-->
-<ol>
-	{%for resp in response.hits.hits %}
-		<p class="a">{{resp._source.name}}, {{resp._source.datum}}, rede_id: {{resp._source.rede_id}}</p>
-		<details>
-			<summary>
-				<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>
-			</summary>
-				<pre><p class="b">{{resp._source.otherParagraphs}}</p></pre>
-				{% if resp._source.sitzungsnummer|length > 2 %}
-					<a href="http://dip21.bundestag.de/dip21/btp/19/19{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
-				{% elif resp._source.sitzungsnummer|length == 2 %}
-					<a href="http://dip21.bundestag.de/dip21/btp/19/190{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
-				{% else %}
-					<a href="http://dip21.bundestag.de/dip21/btp/19/1900{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
-				{% endif %}
-	</details>
-	<br><br>
-	{% endfor %}
-</ol>
+	{% if response is defined %}
+		{% if response.hits.hits|length == 0 %}
+			<p class="c">Die Suche nach "{{q}}" ergab leider keine Treffer.</p>
+		{% else %}
+			<p class="c">Die Suche nach "{{q}}" ergab {{response.hits.total.value}} Treffer.</p>
+			<ol>
+				{%for resp in response.hits.hits %}
+					<p class="a">{{resp._source.name}}, {{resp._source.datum}}, rede_id: {{resp._source.rede_id}}</p>
+					<details>
+						<summary>
+							{% if resp.highlight is defined %}
+								{% if resp.highlight.paragraph1|length > 0 %}
+									{% for h in resp.highlight.paragraph1 %}
+										<p class="b">{{resp.highlight.paragraph1[loop.index0] | safe}} <span>...</span></p>
+									{% endfor %}
+								{% elif resp.highlight.otherParagraphs|length > 0 %}
+									{% for h in resp.highlight.otherParagraphs %}
+										<p class="b">{{resp.highlight.otherParagraphs[loop.index0] | safe}} <span>...</span></p>
+									{% endfor %}
+								{% else %}
+									<p class="c">Mehr anzeigen</p>
+								{% endif %}
+							{% else %}
+								<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>
+							{% endif %}
+						</summary>
+							<p class="d">Vollständige Rede:</p>
+							<pre><p class="b">{{resp._source.rede}}</p></pre>
+							{% if resp._source.sitzungsnummer|length > 2 %}
+								<a href="http://dip21.bundestag.de/dip21/btp/19/19{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
+							{% elif resp._source.sitzungsnummer|length == 2 %}
+								<a href="http://dip21.bundestag.de/dip21/btp/19/190{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
+							{% else %}
+								<a href="http://dip21.bundestag.de/dip21/btp/19/1900{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
+							{% endif %}
+					</details>
+			<br><br>
+				{% endfor %}
+			</ol>
+		{% endif %}
+	{% endif %}
 </form>
 </body>
 </html>
