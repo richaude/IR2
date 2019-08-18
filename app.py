@@ -1,9 +1,13 @@
 from flask import Flask, render_template, request
+from flask_paginate import Pagination, get_page_parameter, get_page_args
 from elasticsearch import Elasticsearch
 #import re
 
 app = Flask(__name__)
 es = Elasticsearch()
+
+def getResults(results, offset=0, per_page=10):
+	return results[offset: offset + per_page]
 
 @app.route('/',methods=["GET","POST"])
 def index():
@@ -26,9 +30,43 @@ def index():
 				}
 		}, size=1435)
 		# size ist nun die Anzahl aller Dokumente im Korpus
-		return render_template("index.html", q=q, response=resp)
-	return render_template("index.html")
+		search=False
+		#page = request.args.get(get_page_parameter(), type=int, default=1)
+		#pagination = Pagination(page=page, total=users.count(), search=search, record_name='users')
+		page, per_page, offset = get_page_args(page_parameter='page', per_page_parameter='per_page')
+		pagination_results = getResults(offset=offset, per_page=per_page, results=resp["hits"]["hits"])
+		pagination = Pagination(page=page, per_page=per_page, total=resp["hits"]["total"]["value"], search=search, css_framework='bootstrap4')
+		#print(pagination_results)
+		return render_template("index.html", 
+								q=q, 
+								response=resp,
+								page=page,
+								per_page=per_page,
+								results = pagination_results, 
+								pagination=pagination
+								)
+	return render_template("index.html", pagination=None)
 
+"""
+def get_users(offset=0, per_page=10):
+    return users[offset: offset + per_page]
+
+
+@app.route('/')
+def index():
+    page, per_page, offset = get_page_args(page_parameter='page',
+                                           per_page_parameter='per_page')
+    total = len(users)
+    pagination_users = get_users(offset=offset, per_page=per_page)
+    pagination = Pagination(page=page, per_page=per_page, total=total,
+                            css_framework='bootstrap4')
+    return render_template('index.html',
+                           users=pagination_users,
+                           page=page,
+                           per_page=per_page,
+                           pagination=pagination,
+                           )
+"""
 
 if __name__ == "__main__":
 	app.run(debug=True,port=8000)

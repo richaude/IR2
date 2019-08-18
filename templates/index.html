@@ -3,7 +3,17 @@
 <head>
 	<meta charset = "UTF-8">
 	<title>AfD statement search</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 	<style>
+		h1 {
+			display: block;
+			font-size: 2em;
+			margin-top: 0.67em;
+			margin-bottom: 0.67em;
+			margin-left: 0.67em;
+			margin-right: 0.67em;
+			font-weight: bold;
+		}
 		pre {
             overflow-x: auto;
             white-space: pre-wrap;
@@ -14,7 +24,7 @@
          }
         p.a {
 			font-family: Arial, Helvetica, sans-serif;
-			font-size: 16px;
+			font-size: 20px;
 			font-weight: bold;
 			color: blue;
 		}
@@ -25,6 +35,7 @@
 			/*color: red;*/
 			font-size: 16px;
 			padding-left: 40px;
+			margin-top: 0.67em;
 		}
 		p.d {
 			font-family: Arial, Helvetica, sans-serif;
@@ -35,13 +46,8 @@
 		}
         p.b {
 			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
 			padding-right: 30px;
-			/*color: grey; 
-			overflow: hidden; 
-			height: 64px;
-			line-height: 16px; 
-			position: relative;
-			word-wrap: break-word;*/
 		 }
 		 span {
 			 font-family: Arial, Helvetica, sans-serif;
@@ -63,9 +69,11 @@
 		}
 		a {
 			font-family: Arial, Helvetica, sans-serif;
+			color: blue;
 		}
-		em {
-			font-family: Arial, Helvetica, sans-serif;
+		mark {
+			background-color: yellow;
+			color: black;
 		}
 	</style>
 </head>
@@ -81,29 +89,35 @@
 			<p class="c">Die Suche nach "{{q}}" ergab leider keine Treffer.</p>
 		{% else %}
 			<p class="c">Die Suche nach "{{q}}" ergab {{response.hits.total.value}} Treffer.</p>
+			<!--{{pagination.info}}-->
+			{{pagination.links}}
 			<ol>
-				{%for resp in response.hits.hits %}
-					<p class="a">{{resp._source.name}}, {{resp._source.datum}}, rede_id: {{resp._source.rede_id}}</p>
+				{%for resp in results %}
+				<!--{% set current = loop.index + (page - 1) * per_page %}-->
 					<details>
 						<summary>
+							<p class="a">{{resp._source.name}}, {{resp._source.datum}}, rede_id: {{resp._source.rede_id}}</p>
 							{% if resp.highlight is defined %}
 								{% if resp.highlight.paragraph1|length > 0 %}
 									{% for h in resp.highlight.paragraph1 %}
-										<p class="b">{{resp.highlight.paragraph1[loop.index0] | safe}} <span>...</span></p>
+										<p class="b">{{resp.highlight.paragraph1[loop.index0] | safe}} </p>
 									{% endfor %}
-								{% elif resp.highlight.otherParagraphs|length > 0 %}
+								{% endif %}
+								{% if resp.highlight.otherParagraphs|length > 0 %}
 									{% for h in resp.highlight.otherParagraphs %}
-										<p class="b">{{resp.highlight.otherParagraphs[loop.index0] | safe}} <span>...</span></p>
+										<p class="b">{{resp.highlight.otherParagraphs[loop.index0] | safe}} </p>
 									{% endfor %}
-								{% else %}
-									<p class="c">Mehr anzeigen</p>
+								{% endif %}
+								{% if resp.highlight.paragraph1|length == 0 and resp.highlight.otherParagraphs|length == 0 %}
+									<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>
 								{% endif %}
 							{% else %}
 								<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>
 							{% endif %}
 						</summary>
 							<p class="d">Vollständige Rede:</p>
-							<pre><p class="b">{{resp._source.rede}}</p></pre>
+							<pre><p class="b">{{resp._source.paragraph1}}</p></pre>
+							<pre><p class="b">{{resp._source.otherParagraphs}}</p></pre>
 							{% if resp._source.sitzungsnummer|length > 2 %}
 								<a href="http://dip21.bundestag.de/dip21/btp/19/19{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>
 							{% elif resp._source.sitzungsnummer|length == 2 %}
@@ -113,8 +127,10 @@
 							{% endif %}
 					</details>
 			<br><br>
+				{% set begin = page %}
 				{% endfor %}
 			</ol>
+		{{pagination.links}}
 		{% endif %}
 	{% endif %}
 </form>
