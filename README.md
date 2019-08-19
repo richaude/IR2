@@ -50,6 +50,8 @@ Mean average precision after the first evaluation is at 0.9773640661938535.
 new_index2: text wird so gelassen, Stand der ersten Evaluation
 new_index4: Bindestriche werden gelöscht (klappt gut bei "linksgrün", klappt nicht bei G20)
 bei new_index4: multi match query für ersten Abschnitt^3, dann alle anderen Absätze, und vollständige Rede^2.
+new_index5: Stemming, Similarity
+**Stand 19.8.:** new_index hat einen customisierten Index mit eigener Similarity, eigenen Filtern, Synonymen...
 
 
 #### this section is outdated, we decided to abandon Quepid

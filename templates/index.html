@@ -88,7 +88,7 @@
 		{% if response.hits.hits|length == 0 %}
 			<p class="c">Die Suche nach "{{q}}" ergab leider keine Treffer.</p>
 		{% else %}
-			<p class="c">Die Suche nach "{{q}}" ergab {{response.hits.total.value}} Treffer.</p>
+			<p class="c">Die Suche nach "{{q}}" ergab {{response.hits.total.value}} Treffer. Es werden maximal zehn Ergebnisse pro Seite dargestellt.</p>
 			<!--{{pagination.info}}-->
 			{{pagination.links}}
 			<ol>
@@ -127,7 +127,6 @@
 							{% endif %}
 					</details>
 			<br><br>
-				{% set begin = page %}
 				{% endfor %}
 			</ol>
 		{{pagination.links}}

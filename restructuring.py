@@ -6,9 +6,6 @@ def chopping(filename, indexname):
 	with open(filename, 'r') as file_handle:
 		parsed_json = json.loads(file_handle.read())
 		for document in parsed_json["statements"]:
-			#print(searchParagraphs(document["rede"]))
-			#print(screwItLikeATweet(document["rede"]))
-			#print("\n\n")
 			yield {
                 "_index": indexname,
                 "rede_id":document["dokument_id"],
@@ -18,8 +15,6 @@ def chopping(filename, indexname):
                 "rede":deleteHyphens(document["rede"]),
                 "paragraph1":searchParagraphs(document["rede"])[0],
                 "otherParagraphs":searchParagraphs(document["rede"])[1],
-                "preview":screwItLikeATweet(document["rede"])[0],
-                "rest":screwItLikeATweet(document["rede"])[1],
                 "_type": "_doc",
             }    
 
@@ -29,12 +24,6 @@ def searchParagraphs(text):
 	if paragraphs is not None and len(paragraphs) >= 2:
 		return [paragraphs[0],"\n\n".join(paragraphs[1:])] # es ist im Prinzip wie head und tail
 	return [text, ""]
-	
-def screwItLikeATweet(text):
-	if text is not None:
-		if len(text) >= 280:
-			return [text[:280], text[280:]]
-		else: return [text, text]
 		
 def replaceHyphens(text):
 	return text.replace("-","_")
@@ -44,11 +33,99 @@ def replaceUnderscores(text):
 	
 def deleteHyphens(text):
 	return text.replace("-","")
+
 	
-def zahlen(text):
-	for word in text.split():
-		pass
-	
-#print(searchParagraphs("Halllo ihr \n\n wie geht es euch \n seid ihr gut drauf?? \n\n ich auch!"))
+def createIndex(es, indexname):
+	es.indices.create(indexname, body = {
+  "settings": {
+   "similarity": {
+      "my_similarity": {
+        "type": "BM25",
+        "k1": 10,
+        "b": 0
+      }
+    },
+    "analysis": {
+      "filter": {
+        "german_stop": {
+          "type":       "stop",
+          "stopwords":  ["_german_", "for", "or", "and", "the", "is"]
+        },
+        #"german_keywords": {
+        #  "type":       "keyword_marker"
+          #"keywords":   ["Beispiel"] 
+       # },
+        "german_stemmer": {
+          "type":       "stemmer",
+          "language":   "light_german"
+        },
+        "synonym" : {
+			"type" : "synonym",
+			"synonyms" : [
+			"sexualität => intersexuell, transsexuell, heterosexuell, bisexuell, lgbt, homosexuell, sexuell",
+			"g20, g-20, g 20",
+			"islam, moschee, imam, muslime, moslems, koran",
+			"russland => russische föderation",
+			"usa => vereinigte staaten",
+			"wahlbeeinflussung, wahlbetrug",
+			"antifaschismus => antifaschistisch",
+			"rechtsextrem, rechtsradikal, rechtsextremismus",
+			"linksextrem, linksradikal, linksextremismus"
+			]
+		}
+      },
+      "analyzer": {
+        "rebuilt_german": {
+          "tokenizer":  "standard",
+          "filter": [
+            "lowercase",
+            "synonym",
+            "german_stop",
+            #"german_keywords",
+            "german_normalization",
+            "german_stemmer"
+            #"synonym"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+	"properties": {
+		"rede_id": {
+			"type": "integer"
+		},
+		"name": {
+			"type": "text",
+			"similarity": "my_similarity",
+			"analyzer": "rebuilt_german"
+      },
+      "datum": {
+		"type": "text"
+      },
+      "sitzungsnummer": {
+      	"type": "text"
+      },
+      "rede": {
+			"type": "text",
+			"similarity": "my_similarity",
+			"analyzer": "rebuilt_german"
+      },
+      "paragraph1": {
+			"type": "text",
+			"similarity": "my_similarity",
+			"analyzer": "rebuilt_german"
+      },
+      "otherParagraphs": {
+			"type": "text",
+			"similarity": "my_similarity",
+			"analyzer": "rebuilt_german"
+      }
+	}
+  }
+	})
+
 es = Elasticsearch()
-bulk(es, chopping("protokolle5.json", "new_index4"))
+createIndex(es, "new_index")
+bulk(es, chopping("protokolle5.json", "new_index"))
+#curl -XDELETE 'http://localhost:9200/*' löscht alle Indizes
