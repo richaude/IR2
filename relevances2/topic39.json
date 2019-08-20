@@ -1,0 +1,29 @@
+{
+	"id": "039", 
+	"title": "Rassismus", 
+	"description": "When does the AfD mention racism", 
+	"narrative": "relevant documents mention racism and talk about it in a stand out fashion",
+	"relevances": [
+	{
+		"rede_id":138,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1073,
+		"isRelevant":1
+	},
+	{
+		"rede_id":44,
+		"isRelevant":0
+	},
+	{
+		"rede_id":71,
+		"isRelevant":0
+	},
+	{
+		"rede_id":1173,
+		"isRelevant":0
+	}
+	]
+	}
+

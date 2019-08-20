@@ -5,15 +5,15 @@
 	"narrative": "Relevant documents must include mentions of international meetings, especially the G 20.",
 	"relevances" : [
 	{
-		"rede_id":449,
+		"rede_id":926,
 		"isRelevant":1
 	},
 	{
-		"rede_id":796,
+		"rede_id":113,
 		"isRelevant":1
 	},
 	{
-		"rede_id":608,
+		"rede_id":214,
 		"isRelevant":1
 	},
 	{
@@ -21,7 +21,7 @@
 		"isRelevant":1
 	},
 	{
-		"rede_id":1172,
+		"rede_id":358,
 		"isRelevant":1
 	}
 	]}

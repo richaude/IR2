@@ -1,0 +1,29 @@
+{
+	"id": "010", 
+	"title": "Linksextreme", 
+	"description": "To which extent do AfD members speak about extremism from the far left?", 
+	"narrative": "relevant documents must include broad discussions about the danger of left wing extremism",
+	"relevances": [
+	{
+		"rede_id":573,
+		"isRelevant":0
+	},
+	{
+		"rede_id":926,
+		"isRelevant":1
+	},
+	{
+		"rede_id":43,
+		"isRelevant":1
+	},
+	{
+		"rede_id":59,
+		"isRelevant":0
+	},
+	{
+		"rede_id":139,
+		"isRelevant":1
+	}
+	]
+	}
+

@@ -13,6 +13,7 @@ def chopping(filename, indexname):
                 "datum":document["datum"],
                 "sitzungsnummer":document["sitzungsnummer"],
                 "rede":deleteHyphens(document["rede"]),
+                #"rede":document["rede"],
                 "paragraph1":searchParagraphs(document["rede"])[0],
                 "otherParagraphs":searchParagraphs(document["rede"])[1],
                 "_type": "_doc",
@@ -47,6 +48,11 @@ def createIndex(es, indexname):
     },
     "analysis": {
       "filter": {
+		#"trigrams": {
+        #  "type": "ngram",
+        #  "min_gram": 3,
+        #  "max_gram": 3
+        #  },
         "german_stop": {
           "type":       "stop",
           "stopwords":  ["_german_", "for", "or", "and", "the", "is"]
@@ -62,15 +68,19 @@ def createIndex(es, indexname):
         "synonym" : {
 			"type" : "synonym",
 			"synonyms" : [
-			"sexualität => intersexuell, transsexuell, heterosexuell, bisexuell, lgbt, homosexuell, sexuell",
+			"sexualität => intersexuell, transsexuell, heterosexuell, bisexuell, lgbt, homosexuell, sexuell, gender",
 			"g20, g-20, g 20",
-			"islam, moschee, imam, muslime, moslems, koran",
-			"russland => russische föderation",
-			"usa => vereinigte staaten",
+			"islam => moschee, imam, muslime, moslems, koran",
+			"flüchtlinge, migranten",
+			"russland, russische föderation",
+			"usa, vereinigte staaten",
 			"wahlbeeinflussung, wahlbetrug",
 			"antifaschismus => antifaschistisch",
 			"rechtsextrem, rechtsradikal, rechtsextremismus",
-			"linksextrem, linksradikal, linksextremismus"
+			"linksextrem, linksradikal, linksextremismus",
+			"no deal brexit => harter brexit, ungeordneter brexit",
+			"merkel, bundeskanzlerin"
+			#"linksgrün => links-grün, links grün"
 			]
 		}
       },
@@ -79,7 +89,9 @@ def createIndex(es, indexname):
           "tokenizer":  "standard",
           "filter": [
             "lowercase",
+            #"trigrams",
             "synonym",
+            #"trigrams",
             "german_stop",
             #"german_keywords",
             "german_normalization",

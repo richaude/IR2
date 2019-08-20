@@ -1,0 +1,29 @@
+{
+	"id": "027", 
+	"title": "Wahl", 
+	"description": "Which elections are mentioned by the AfD, what kind of aspects are spoken about", 
+	"narrative": "relevant documents speak about elections and the election process in particular",
+	"relevances": [
+	{
+		"rede_id":1025,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1239,
+		"isRelevant":0
+	},
+	{
+		"rede_id":377,
+		"isRelevant":0
+	},
+	{
+		"rede_id":431,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1160,
+		"isRelevant":1
+	}
+	]
+	}
+

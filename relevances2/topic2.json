@@ -1,0 +1,28 @@
+{
+	"id": "002", 
+	"title": "no deal brexit", 
+	"description": "How does the AfD anticipate a no deal Brexit?", 
+	"narrative": "Relevant documents must include the special case of a Brexit without any treaties.",
+	"relevances": [
+	{
+		"rede_id":1037,
+		"isRelevant":1
+	},
+	{
+		"rede_id":30,
+		"isRelevant":1
+	},
+	{
+		"rede_id":761,
+		"isRelevant":0
+	},
+	{
+		"rede_id":956,
+		"isRelevant":1
+	},
+	{
+		"rede_id":675,
+		"isRelevant":1
+	}
+	
+]}

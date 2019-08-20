@@ -1,0 +1,14 @@
+{
+	"id": "029", 
+	"title": "Wahlbeeinflussung", 
+	"description": "Does the AfD cover election meddling in their speeches", 
+	"narrative": "relevant documents talk about the dangers of election meddling and undermining of democratic values in a stand out fashion",
+	"relevances": [
+	{
+		"rede_id":1308,
+		"isRelevant":1
+	}
+	
+	]
+	}
+

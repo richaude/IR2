@@ -1,0 +1,29 @@
+{
+	"id": "028", 
+	"title": "Demokratie", 
+	"description": "How is democracy valued by the AfD", 
+	"narrative": "relevant documents talk about character and importance of a well functioning democracy",
+	"relevances": [
+	{
+		"rede_id":248,
+		"isRelevant":1
+	},
+	{
+		"rede_id":573,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1162,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1067,
+		"isRelevant":0
+	},
+	{
+		"rede_id":198,
+		"isRelevant":1
+	}
+	]
+	}
+

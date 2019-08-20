@@ -1,0 +1,29 @@
+{
+	"id": "035", 
+	"title": "1989", 
+	"description": "How does the AfD see the events that took place in 1989?", 
+	"narrative": "relevant documents mention the year 1989 and it's meaning for AfD members",
+	"relevances": [
+	{
+		"rede_id":1339,
+		"isRelevant":1
+	},
+	{
+		"rede_id":152,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1365,
+		"isRelevant":1
+	},
+	{
+		"rede_id":64,
+		"isRelevant":0
+	},
+	{
+		"rede_id":252,
+		"isRelevant":0
+	}
+	]
+	}
+

@@ -15,14 +15,17 @@ def index():
 		resp = es.search(index="new_index",body = {
 			"query": {
 				"multi_match": {
-					"query": q, "fields" : [ "paragraph1^3", "otherParagraphs", "rede^2", "name^5" ]
+					"query": q, "fields" : [ "paragraph1", "otherParagraphs^3", "rede^2", "name^9" ]
 				}
 			}, "highlight": {
-					"pre_tags": ["<mark>"], "post_tags": ["</mark>"],"fields": {
+					"pre_tags": ["<mark>"], "post_tags": ["</mark>"],
+					"fields": {
 						"paragraph1": {
 							"number_of_fragments": 2
 						}, "otherParagraphs": {
 								"number_of_fragments": 2
+							}, "rede": {
+								"number_of_fragments":2
 							}
 					}
 				}

@@ -1,0 +1,29 @@
+{
+	"id": "024", 
+	"title": "Trump", 
+	"description": "Which speeches talk about the American President Donald Trump?", 
+	"narrative": "relevant documents must be about Trump, not among other heads of state, but especially about him and his leading style",
+	"relevances": [
+	{
+		"rede_id":178,
+		"isRelevant":1
+	},
+	{
+		"rede_id":420,
+		"isRelevant":1
+	},
+	{
+		"rede_id":945,
+		"isRelevant":0
+	},
+	{
+		"rede_id":514,
+		"isRelevant":0
+	},
+	{
+		"rede_id":179,
+		"isRelevant":1
+	}
+	]
+	}
+

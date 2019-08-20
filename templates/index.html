@@ -109,14 +109,18 @@
 									{% endfor %}
 								{% endif %}
 								{% if resp.highlight.paragraph1|length == 0 and resp.highlight.otherParagraphs|length == 0 %}
-									<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>
+									{% for h in resp.highlight.rede %}
+										{% if not loop.index0 > 1 %}
+										<pre><p class="b">{{ resp.highlight.rede[loop.index0] | safe }}</p></pre>
+										{% endif %}
+									{% endfor %}
 								{% endif %}
 							{% else %}
 								<pre><p class="b">{{resp._source.paragraph1}}<span>...</span></p></pre>
 							{% endif %}
 						</summary>
 							<p class="d">Vollständige Rede:</p>
-							<pre><p class="b">{{resp._source.paragraph1}}</p></pre>
+							<pre><p class="b">{{resp._source.paragraph1}} </p></pre>
 							<pre><p class="b">{{resp._source.otherParagraphs}}</p></pre>
 							{% if resp._source.sitzungsnummer|length > 2 %}
 								<a href="http://dip21.bundestag.de/dip21/btp/19/19{{resp._source.sitzungsnummer}}.pdf">ganzes Sitzungsprotokoll ansehen</a>

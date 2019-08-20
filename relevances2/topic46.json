@@ -1,0 +1,29 @@
+{
+	"id": "046", 
+	"title": "Greta Thunberg", 
+	"description": "Does the AfD mention Greta Thunberg, and how", 
+	"narrative": "relevant documents mention Greta Thunberg",
+	"relevances": [
+	{
+		"rede_id":1099,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1360,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1273,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1429,
+		"isRelevant":1
+	},
+	{
+		"rede_id":952,
+		"isRelevant":1
+	}
+	]
+	}
+

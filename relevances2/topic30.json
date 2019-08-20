@@ -1,0 +1,29 @@
+{
+	"id": "030", 
+	"title": "Gauland", 
+	"description": "What kind of speeches are delivered by AfD politician Gauland, what kind of other speeches mention him?", 
+	"narrative": "relevant documents are speeches by Gauland or speeches that mention him",
+	"relevances": [
+	{
+		"rede_id":5,
+		"isRelevant":1
+	},
+	{
+		"rede_id":19,
+		"isRelevant":1
+	},
+	{
+		"rede_id":46,
+		"isRelevant":1
+	},
+	{
+		"rede_id":76,
+		"isRelevant":1
+	},
+	{
+		"rede_id":116,
+		"isRelevant":1
+	}
+	]
+	}
+

@@ -1,0 +1,29 @@
+{
+	"id": "043", 
+	"title": "Hitler", 
+	"description": "Does the AfD ever mention Hitler", 
+	"narrative": "relevant documents mention Hitler",
+	"relevances": [
+	{
+		"rede_id":73,
+		"isRelevant":1
+	},
+	{
+		"rede_id":288,
+		"isRelevant":1
+	},
+	{
+		"rede_id":417,
+		"isRelevant":1
+	},
+	{
+		"rede_id":552,
+		"isRelevant":1
+	},
+	{
+		"rede_id":951,
+		"isRelevant":1
+	}
+	]
+	}
+

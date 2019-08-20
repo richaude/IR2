@@ -1,0 +1,31 @@
+{
+	"id": "008", 
+	"title": "Digitalisierung", 
+	"description": "How important is digitalisation for the AfD", 
+	"narrative": "Relevant documents must include plans for further digitalisation or a description of current conditions.",
+	"relevances": [
+	{
+		"rede_id":96,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1298,
+		"isRelevant":1
+	},
+	{
+		"rede_id":821,
+		"isRelevant":1
+	},
+	{
+		"rede_id":63,
+		"isRelevant":1
+	},
+	{
+		"rede_id":200,
+		"isRelevant":1
+	}
+	
+	]
+	
+	}
+

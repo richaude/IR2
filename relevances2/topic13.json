@@ -1,0 +1,29 @@
+{
+	"id": "013", 
+	"title": "Sexualität", 
+	"description": "In which way does the AfD speak about sexuality?", 
+	"narrative": "relevant documents mention different aspects of sexual orientation or preferences",
+	"relevances": [
+	{
+		"rede_id":291,
+		"isRelevant":0
+	},
+	{
+		"rede_id":102,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1325,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1326,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1417,
+		"isRelevant":1
+	}
+	]
+	}
+

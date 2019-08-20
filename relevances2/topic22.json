@@ -1,0 +1,29 @@
+{
+	"id": "022", 
+	"title": "Schulen", 
+	"description": "How do AfD members speak of schools", 
+	"narrative": "relevant documents adress the current situation of public schools as a main issue",
+	"relevances": [
+	{
+		"rede_id":929,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1098,
+		"isRelevant":1
+	},
+	{
+		"rede_id":291,
+		"isRelevant":1
+	},
+	{
+		"rede_id":352,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1298,
+		"isRelevant":1
+	}
+	]
+	}
+

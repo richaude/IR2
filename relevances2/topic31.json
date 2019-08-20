@@ -1,0 +1,29 @@
+{
+	"id": "031", 
+	"title": "Weidel", 
+	"description": "What kind of speeches are delivered by AfD politician Weidel, what kind of other speeches mention her", 
+	"narrative": "relevant documents are speeches by Weidel or speeches that mention her",
+	"relevances": [
+	{
+		"rede_id":551,
+		"isRelevant":1
+	},
+	{
+		"rede_id":12,
+		"isRelevant":1
+	},
+	{
+		"rede_id":77,
+		"isRelevant":1
+	},
+	{
+		"rede_id":115,
+		"isRelevant":1
+	},
+	{
+		"rede_id":198,
+		"isRelevant":1
+	}
+	]
+	}
+

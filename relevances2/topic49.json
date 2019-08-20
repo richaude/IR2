@@ -1,0 +1,29 @@
+{
+	"id": "049", 
+	"title": "Fachkräftemangel", 
+	"description": "How does the AfD talk about the issue of missing qualifications on the job market", 
+	"narrative": "relevant documents mention a description of the current situation of the job market",
+	"relevances": [
+	{
+		"rede_id":964,
+		"isRelevant":1
+	},
+	{
+		"rede_id":350,
+		"isRelevant":1
+	},
+	{
+		"rede_id":869,
+		"isRelevant":1
+	},
+	{
+		"rede_id":897,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1304,
+		"isRelevant":0
+	}
+	]
+	}
+

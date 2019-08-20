@@ -1,0 +1,29 @@
+{
+	"id": "040", 
+	"title": "Antifaschismus", 
+	"description": "When and how does the AfD speak about antifascism", 
+	"narrative": "relevant documents mention and talk in a stand out fashion about antifascism",
+	"relevances": [
+	{
+		"rede_id":951,
+		"isRelevant":1
+	},
+	{
+		"rede_id":88,
+		"isRelevant":1
+	},
+	{
+		"rede_id":93,
+		"isRelevant":0
+	},
+	{
+		"rede_id":551,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1303,
+		"isRelevant":0
+	}
+	]
+	}
+

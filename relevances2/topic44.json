@@ -1,0 +1,29 @@
+{
+	"id": "044", 
+	"title": "drittes Reich", 
+	"description": "Do AfD members speak about the Nazi regime, using this propaganda term?", 
+	"narrative": "relevant documents explicitly mention this term",
+	"relevances": [
+	{
+		"rede_id":1169,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1028,
+		"isRelevant":0
+	},
+	{
+		"rede_id":1111,
+		"isRelevant":0
+	},
+	{
+		"rede_id":690,
+		"isRelevant":0
+	},
+	{
+		"rede_id":292,
+		"isRelevant":0
+	}
+	]
+	}
+

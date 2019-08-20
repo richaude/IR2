@@ -44,6 +44,9 @@ The first evaluation of the project was done on August 11, using a total amount 
 Topics and assigned judgements can be found in the `topics` respectively `relevances` folder.
 Mean average precision after the first evaluation is at 0.9773640661938535.
 
+#### second evaluation
+MAP: 0.9508786848072561 (actually, it got worse)
+
 ### Optimization
 
 #### Log:

@@ -1,0 +1,30 @@
+{
+	"id": "009", 
+	"title": "linksgrün", 
+	"description": "in which kind of contexts does the AfD use \"linksgrün\"", 
+	"narrative": "The assumption is that they will make overt use of this word, so relevant documents must feature this word in prominent places.",
+	"relevances": [
+	{
+		"rede_id":1313,
+		"isRelevant":1
+	},
+	{
+		"rede_id":697,
+		"isRelevant":1
+	},
+	{
+		"rede_id":271,
+		"isRelevant":1
+	},
+	{
+		"rede_id":876,
+		"isRelevant":1
+	},
+	{
+		"rede_id":1397,
+		"isRelevant":1
+	}
+	
+	]
+	}
+

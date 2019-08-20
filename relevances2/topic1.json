@@ -1,0 +1,28 @@
+{
+	"id": "001", 
+	"title": "Brexit", 
+	"description": "What's the opinion of the AfD towards Brexit?", 
+	"narrative": "Relevant documents must include a judgement of all the happenings and processes about Brexit.",
+    "relevances": [
+    {
+		"rede_id": 1037,
+		"isRelevant": 1
+    },
+    {
+		"rede_id":761,
+		"isRelevant":1
+	},
+	{
+		"rede_id":30,
+		"isRelevant":1
+	},
+	{
+		"rede_id":956,
+		"isRelevant":1
+	},
+	{
+		"rede_id":676,
+		"isRelevant":1
+	}]
+}
+

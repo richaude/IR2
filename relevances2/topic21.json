@@ -1,0 +1,29 @@
+{
+	"id": "021", 
+	"title": "Waffen", 
+	"description": "When do AfD members mention weapons", 
+	"narrative": "relevant documents mention any kind of weapons, either smaller ones like guns and pistols, but also e.g. nuclear weapons",
+	"relevances": [
+	{
+		"rede_id":607,
+		"isRelevant":1
+	},
+	{
+		"rede_id":20,
+		"isRelevant":1
+	},
+	{
+		"rede_id":93,
+		"isRelevant":0
+	},
+	{
+		"rede_id":244,
+		"isRelevant":1
+	},
+	{
+		"rede_id":421,
+		"isRelevant":1
+	}
+	]
+	}
+
