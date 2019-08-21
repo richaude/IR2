@@ -11,9 +11,9 @@ This application relies on Elasticsearch and Python to function. To set up the p
 Python should already be installed on Ubuntu, make sure to check on the command line with `python3 -V`. If it's not installed, do `sudo apt-get install python3`.
 It is necessary to install some libraries for this project in python, therefore pip is needed: `sudo apt-get install python3-pip`.
 Now to installing the necessary libraries:
-`pip install -U Flask`
-`pip install -U flask-paginate`
-`pip install Elasticsearch`.
+* `pip install -U Flask`
+* `pip install -U flask-paginate`
+* `pip install Elasticsearch`.
 
 ### Set Up the Search
 
