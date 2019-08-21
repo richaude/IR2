@@ -19,7 +19,7 @@ Now to installing the necessary libraries:
 
 While elasticsearch is running in one terminal, execute in a different terminal window:
 * `python3 restructuring.py`
-* `app.py` 
+* `python3 app.py` 
 
 It is critical that they are executed one after the other.
 
