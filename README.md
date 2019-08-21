@@ -19,7 +19,9 @@ Now to installing the necessary libraries:
 
 While elasticsearch is running in one terminal, execute in a different terminal window:
 * `python3 restructuring.py`
-* `app.py`. It is critical that they are executed one after the other.
+* `app.py` 
+
+It is critical that they are executed one after the other.
 
 Then, open `http://127.0.0.1:8000/` in your browser (or click [this](http://127.0.0.1:8000/) link). You can now enter your search terms!
 End the program with `Ctrl+C`.
