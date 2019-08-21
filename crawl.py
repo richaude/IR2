@@ -2,8 +2,8 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import requests, json, os
 # vorher Bibliothek installieren: pip install elasticsearch
-from elasticsearch import Elasticsearch
-from elasticsearch.helpers import bulk
+#from elasticsearch import Elasticsearch
+#from elasticsearch.helpers import bulk
 
 			
 def findeAfD4(url, dictionaryList, rede_id):
@@ -182,6 +182,6 @@ def alleSitzungen():
 			]
 
 	
-#mkJson3("protokolle5.json")
-es = Elasticsearch()
-bulk(es, documents("protokolle5.json", "new_index3"))
+mkJson3("protokolle5.json")
+#es = Elasticsearch()
+#bulk(es, documents("protokolle5.json", "new_index3"))

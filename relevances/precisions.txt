@@ -17,9 +17,11 @@ Topic 3, precision@2: 1.0
 
 Topic 3, precision@3: 1.0
 
+Topic 3, precision@4: 1.0
+
 average precision topic 2: 1.0
 
-Topic 3, precision@4: 1.0
+Topic 3, precision@5: 1.0
 
 Topic 4, precision@1: 1.0
 
@@ -431,4 +433,4 @@ Topic 50, precision@3: 1.0
 
 average precision topic 50: 1.0
 
-Mean Average Precision: 0.9773640661938535
+Mean Average Precision: 0.9187222222222223

@@ -96,7 +96,7 @@
 				<!--{% set current = loop.index + (page - 1) * per_page %}-->
 					<details>
 						<summary>
-							<p class="a">{{resp._source.name}}, {{resp._source.datum}}, rede_id: {{resp._source.rede_id}}</p>
+							<p class="a">Rede von {{resp._source.name}} am {{resp._source.datum}}:</p>
 							{% if resp.highlight is defined %}
 								{% if resp.highlight.paragraph1|length > 0 %}
 									{% for h in resp.highlight.paragraph1 %}

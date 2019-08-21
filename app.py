@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from flask_paginate import Pagination, get_page_parameter, get_page_args
 from elasticsearch import Elasticsearch
 
+
 app = Flask(__name__)
 es = Elasticsearch()
 

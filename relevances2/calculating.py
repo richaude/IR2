@@ -34,13 +34,15 @@ def precisionEach():
 			else:
 				#print("undefiniert!")
 				undefiniert += 1
+				print("Undefiniertes Topic: "+str(i))
 			f2 = open("precisions.txt", "a")
 			f2.write("\naverage precision topic "+str(i)+": "+str(averagePrecision)+"\n")
 			f2.flush
 			f2.close
 			averagePrecisions += averagePrecision
 			i += 1
-	meanAveragePrecision = averagePrecisions/(50-undefiniert)
+	meanAveragePrecision = averagePrecisions/(50)
+	print(str(undefiniert))
 	f3 = open("precisions.txt", "a")
 	f3.write("\nMean Average Precision: "+str(meanAveragePrecision))
 	f3.flush

@@ -141,3 +141,4 @@ es = Elasticsearch()
 createIndex(es, "new_index")
 bulk(es, chopping("protokolle5.json", "new_index"))
 #curl -XDELETE 'http://localhost:9200/*' löscht alle Indizes
+

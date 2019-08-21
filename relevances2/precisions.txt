@@ -475,4 +475,4 @@ Topic 50, precision@4: 0.75
 
 average precision topic 50: 0.8055555555555555
 
-Mean Average Precision: 0.9508786848072561
+Mean Average Precision: 0.931861111111111

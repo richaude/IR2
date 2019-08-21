@@ -40,7 +40,7 @@ def precisionEach():
 			f2.close
 			averagePrecisions += averagePrecision
 			i += 1
-	meanAveragePrecision = averagePrecisions/(50-undefiniert)
+	meanAveragePrecision = averagePrecisions/(50)
 	f3 = open("precisions.txt", "a")
 	f3.write("\nMean Average Precision: "+str(meanAveragePrecision))
 	f3.flush
