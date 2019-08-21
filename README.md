@@ -3,7 +3,7 @@
 This application relies on Elasticsearch and Python to function. To set up the project with all dependencies, follow these steps closely.
 ### To set up Elasticsearch
 1. Go to [the Elasticsearch website](https://www.elastic.co/de/start)
-2. For Ubuntu, choose the "Linux 64-bit" version and download it.
+2. For Ubuntu, choose the "Linux 64-bit" version at the "Get Elasticsearch" field and download it.
 3. Extract the downloaded package and navigate into the extracted folder via the command line. If you see the `bin` folder in there, you're alright, if not, navigate deeper inside until you see the bin folder.
 4. enter `bin/elasticsearch` on the command line. Leave the terminal open with elasticsearch running.
 
@@ -18,9 +18,8 @@ Now to installing the necessary libraries:
 ### Set Up the Search
 
 While elasticsearch is running in one terminal, execute in a different terminal window:
-`python3 restructuring.py`
-then
-`app.py`. It is critical that they are executed one after the other.
+* `python3 restructuring.py`
+* `app.py`. It is critical that they are executed one after the other.
 
 Then, open `http://127.0.0.1:8000/` in your browser (or click [this](http://127.0.0.1:8000/) link). You can now enter your search terms!
 End the program with `Ctrl+C`.
