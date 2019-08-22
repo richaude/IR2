@@ -21,7 +21,7 @@ On the command line, navigate to the directory where you want to have the search
 `git clone https://github.com/richaude/IR2.git`  
 A folder named "IR2" should appear. Navigate inside this folder.  
 
-While elasticsearch is running in one terminal, execute in a different terminal window:
+Now execute the following, while elasticsearch is running in a different terminal window:  
 * `python3 restructuring.py`
 * `python3 app.py` 
 
