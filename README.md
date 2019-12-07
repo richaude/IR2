@@ -1,5 +1,8 @@
 # IR2 - AfD statement search
-## Second attempt to develop a fully functioning search engine
+## About
+This application is, fully functioning, a search engine to search through all the statements made by the political party _AfD_ in the German parliament.
+The installation steps are described for an entirely new Ubuntu 18.04 OS with no other prerequisites.
+## Developing a fully functioning search engine
 This application relies on Elasticsearch and Python to function. To set up the project with all dependencies, follow these steps closely.
 ### set up Elasticsearch
 1. Go to [the Elasticsearch website](https://www.elastic.co/de/start)
