@@ -10,7 +10,7 @@ This application relies on Elasticsearch and Python to function. To set up the p
 3. Extract the downloaded package and navigate into the extracted folder via the command line. If you see the `bin` folder in there, you're alright, if not, navigate deeper inside until you see the bin folder.
 4. enter `bin/elasticsearch` on the command line. Leave the terminal open with elasticsearch running.
 
-#### set up Python
+### set up Python
 Python should already be installed on Ubuntu, make sure to check the version on the command line with `python3 -V`. If it's not installed, do `sudo apt-get install python3`.
 It is necessary to install some libraries for this project in python, therefore pip is needed: `sudo apt-get install python3-pip`.
 Now to installing the necessary libraries:
@@ -18,7 +18,7 @@ Now to installing the necessary libraries:
 * `pip install -U flask-paginate`
 * `pip install Elasticsearch`.
 
-### set up the search
+### set up the search interface
 
 On the command line, navigate to the directory where you want to have the search folder. Then, enter:  
 `git clone https://github.com/richaude/IR2.git`  
